@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #555555;
+        }
+        input, select, button {
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 16px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="FS">FS:</label>
+            <input type="number" name="FS" required>
+            <br>
+            <label for="FU">FU:</label>
+            <select name="FU" required>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
